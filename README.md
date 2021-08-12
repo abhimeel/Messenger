@@ -6,7 +6,7 @@ A page access token with pages_messaging permission is required to interact with
 
 Apps in Development Mode, are restricted to message people that have a role in the app. Additionally Pages in unpublished status will only be allowed to message people with a role on the Page.
 
-##### Steps to get page access token
+### Steps to get page access token
   1. Create a Facebook page : https://www.facebook.com/help/104002523024878/
   2. Create a Facebook app https://developers.facebook.com/docs/development/create-an-app/
   3. Go to your Facebook app dashboard
