@@ -45,25 +45,25 @@ curl -X POST -H "Content-Type: application/json" -d '{
   }
 }' "https://graph.facebook.com/v11.0/me/messages?access_token=<PAGE_ACCESS_TOKEN>"
 ```
-#### Properties
-- ##### messaging_type : String
-    The messaging type of the message being sent. 
-    https://developers.facebook.com/docs/messenger-platform/send-messages/#messaging_types 
+  #### Properties
+  - ##### messaging_type : String
+      The messaging type of the message being sent. 
+      https://developers.facebook.com/docs/messenger-platform/send-messages/#messaging_types 
 
-- ##### recipient : Object
-    recipient object
-- ##### message : Object
-    message object. Cannot be sent with sender_action.
-- ##### sender_action : Object
-    Message state to display to the user:
-    
-    - typing_on: display the typing bubble
-    - typing_off: remove the typing bubble
-    - mark_seen: display the confirmation icon
-    
-    Cannot be sent with message. Must be sent as a separate request.
-    
-    When using sender_action, recipient should be the only other property set in the request.
+  - ##### recipient : Object
+      recipient object
+  - ##### message : Object
+      message object. Cannot be sent with sender_action.
+  - ##### sender_action : Object
+      Message state to display to the user:
+
+      - typing_on: display the typing bubble
+      - typing_off: remove the typing bubble
+      - mark_seen: display the confirmation icon
+
+      Cannot be sent with message. Must be sent as a separate request.
+
+      When using sender_action, recipient should be the only other property set in the request.
 
 ### API Response
 A successful Send API request to a PSID returns a JSON string containing identifiers for the message and its recipient.
