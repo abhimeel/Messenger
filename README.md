@@ -1,7 +1,7 @@
 # Messenger
 The Send API is the main API used to send messages to users, including text, attachments, structured message templates, sender actions, and more.
 
-#### Permissions
+## Permissions
 A page access token with pages_messaging permission is required to interact with this endpoint.
 
 Apps in Development Mode, are restricted to message people that have a role in the app. Additionally Pages in unpublished status will only be allowed to message people with a role on the Page.
@@ -26,14 +26,14 @@ Apps in Development Mode, are restricted to message people that have a role in t
 
 
 
-### Send API Reference
+## Send API Reference
 https://developers.facebook.com/docs/messenger-platform/send-messages#send_api_basics
 
-#### Request URI
+### Request URI
 `
 https://graph.facebook.com/v11.0/me/messages?access_token=<PAGE_ACCESS_TOKEN>
 `
-#### Example Request
+### Example Request
 ```sh
 curl -X POST -H "Content-Type: application/json" -d '{
   "messaging_type": "<MESSAGING_TYPE>",
@@ -65,3 +65,11 @@ curl -X POST -H "Content-Type: application/json" -d '{
     
     When using sender_action, recipient should be the only other property set in the request.
 
+### API Response
+A successful Send API request to a PSID returns a JSON string containing identifiers for the message and its recipient.
+```sh
+{
+  "recipient_id": "1008372609250235",
+  "message_id": "m_AG5Hz2Uq7tuwNEhXfYYKj8mJEM_QPpz5jdCK48PnKAjSdjfipqxqMvK8ma6AC8fplwlqLP_5cgXIbu7I3rBN0P"
+}
+```
